@@ -16,7 +16,7 @@ class Person < ApplicationRecord
         "lower(first_name) LIKE ? and 
          lower(last_name) LIKE ? and 
          lower(email) LIKE ? and 
-         gender == ?",
+         gender = ?",
          "%#{first_name.downcase}%",
          "%#{last_name.downcase}%",
          "%#{email.downcase}%",
