@@ -5,9 +5,5 @@
 </div>
 
 <div class="row link-back">
-  <% if cookies[:page] == "1" or cookies[:page] == "" %>
-    <%= link_to '<< Voltar', root_path, class: "back" %>
-  <% else %>
-    <%= link_to '<< Voltar', "/?page=#{cookies[:page]}", class: "back" %>
-  <% end %>
+  <%= link_to '<< Voltar', :back %>
 </div>

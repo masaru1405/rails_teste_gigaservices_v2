@@ -4,11 +4,14 @@
 <%= render 'form' %>
 
 <div class="row link-back">
-  <%= link_to '<< Voltar', root_path %>
+  <% if cookies[:page] == "1" or cookies[:page] == "" %>
+    <%= link_to '<< Voltar', root_path, class: "back" %>
+  <% else %>
+    <%= link_to '<< Voltar', "/?page=#{cookies[:page]}", class: "back" %>
+  <% end %>
 </div>
 
 <hr/>
 
 <%= render 'result' %>
 
-<%= cookies[:page] %>

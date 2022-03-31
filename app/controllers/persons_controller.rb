@@ -9,7 +9,6 @@ class PersonsController < ApplicationController
   end
 
   def busca
-    cookies[:page] = params[:page]
     if params[:first_name] or params[:last_name] or params[:email] or params[:gender]
       result = Person.search(params[:first_name], params[:last_name], params[:email], params[:gender])
       @total = result.count
