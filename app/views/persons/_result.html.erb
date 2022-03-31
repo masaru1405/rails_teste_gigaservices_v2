@@ -8,5 +8,7 @@
   <div>
     <%= render partial: 'list', locals: {persons: @persons_result } %>
   </div>
+<% else %>
+  <h5>Nenhum resultado encontrado.</h5>
 <% end %>
  

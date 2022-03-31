@@ -9,12 +9,15 @@ class PersonsController < ApplicationController
   end
 
   def busca
-    if params[:first_name] or params[:last_name] or params[:email] or params[:gender]
+    if  (params[:first_name] == "" or params[:first_name] == nil) and 
+        (params[:last_name] == "" or params[:last_name] == nil) and 
+        (params[:email] == "" or params[:email] == nil) and 
+        (params[:gender] == "" or params[:gender] == nil)
+      @persons_result = nil     
+    else
       result = Person.search(params[:first_name], params[:last_name], params[:email], params[:gender])
       @total = result.count
       @persons_result = result.page(params[:page])
-    else
-      @persons_result = nil
     end
   end
 
