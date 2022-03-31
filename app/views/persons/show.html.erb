@@ -1,0 +1,13 @@
+<div class="row">
+  <h1><%= @person.first_name %> <%= @person.last_name %></h1>
+  <p class="email-show"><%= @person.email %></p>
+  <%= image_tag @person.picture, style: 'width:auto;' %>
+</div>
+
+<div class="row link-back">
+  <% if cookies[:page] == "1" or cookies[:page] == "" %>
+    <%= link_to '<< Voltar', root_path, class: "back" %>
+  <% else %>
+    <%= link_to '<< Voltar', "/?page=#{cookies[:page]}", class: "back" %>
+  <% end %>
+</div>
