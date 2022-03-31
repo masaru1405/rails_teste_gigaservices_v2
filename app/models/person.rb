@@ -2,7 +2,7 @@ class Person < ApplicationRecord
   paginates_per 10
 
   def self.search(first_name, last_name, email, gender)
-    if gender == nil or gender == ""
+    if gender == nil
       person = Person.where(
         "lower(first_name) LIKE ? and 
         lower(last_name) LIKE ? and 
