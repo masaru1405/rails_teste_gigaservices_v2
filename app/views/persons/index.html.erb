@@ -1,4 +1,9 @@
 <div class="row">
-  <h3>Lista de todas as pessoas</h3> 
+  <h3>Lista de todas as pessoas</h3>
+  <div class="col-sm-3">
+    <button type="button" class="btn btn-secondary">
+      <%= link_to 'Realizar uma busca', persons_busca_path %>
+    </button>
+  </div>
   <%= render partial: 'listall', locals: {persons: @persons } %>
 </div>
