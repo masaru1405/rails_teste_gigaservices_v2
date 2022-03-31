@@ -6,6 +6,10 @@ a:link {
   text-decoration: none;
 }
 
+a:hover {
+  color: dodgerblue;
+}
+
 p {
   color: #e9e8e9
 }
@@ -43,6 +47,11 @@ p {
 
 .email-show {
   color: #383838;
+}
+
+.link_busca {
+  color:#e9e8e9;
+  font-family: 'Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif';
 }
 
 /***Change color pagination***/

@@ -2,7 +2,7 @@
   <h3>Lista de todas as pessoas</h3>
   <div class="col-sm-3">
     <button type="button" class="btn btn-secondary">
-      <%= link_to 'Realizar uma busca', persons_busca_path %>
+      <%= link_to 'Realizar uma busca', persons_busca_path, class: 'link_busca' %>
     </button>
   </div>
   <%= render partial: 'list', locals: {persons: @persons } %>
