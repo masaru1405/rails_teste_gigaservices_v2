@@ -1,0 +1,19 @@
+<% persons.each do |person| %>
+      
+  <%= link_to person do %>
+    <div class="mycard">
+      <div class="col-img">
+        <%= image_tag person.picture, class:"rounded-circle" %>
+      </div>
+      <div class="col-info">
+        <h5 class="person-title"><%= "#{person.title} #{person.first_name} #{person.last_name}" %></h5>
+        <p>Gender: <%= person.gender %></p>
+        <p>Email: <%= person.email %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="pagination justify-content-center">
+	<%= paginate @persons %>
+</div>
