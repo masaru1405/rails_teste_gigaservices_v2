@@ -121,6 +121,9 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    kaminari-i18n (0.5.0)
+      kaminari
+      rails
     loofah (2.15.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -251,6 +254,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   kaminari (~> 1.2, >= 1.2.2)
+  kaminari-i18n (~> 0.5.0)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   redis (~> 4.0)
